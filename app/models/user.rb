@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-    has_many: sequences
+    has_many :sequences
 end
