@@ -4,11 +4,13 @@ class SequencesController < ApplicationController
         render json: @sequences
     end
 
+
     def show
         @sequence = 1    # HARD CODED !!!! 
         
 
     end
+
 
     def create
         @sequence = Sequence.new
