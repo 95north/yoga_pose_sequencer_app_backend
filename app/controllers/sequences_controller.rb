@@ -4,6 +4,14 @@ class SequencesController < ApplicationController
         render json: @sequences
     end
 
+
+    def show
+        @sequence = 1    # HARD CODED !!!! 
+        
+
+    end
+
+
     def create
         @sequence = Sequence.new
         @sequence.sequence_name = params[:sequence_name]
@@ -21,7 +29,5 @@ class SequencesController < ApplicationController
         @sequences=Sequence.all
         render json: @sequences
     end
-
-
 
 end
