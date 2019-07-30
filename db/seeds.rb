@@ -1,13 +1,17 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the rails db:seed command (or create!d alongside the database with db:setup).
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create!(name: 'Luke', movie: movies.first)
 
+Pose.destroy_all
+User.destroy_all
+Sequence.destroy_all
+SequencePose.destroy_all
 
-aP = Pose.create({
+aP = Pose.create!({
     "pose_name": "Child's Pose",
     "sanskrit_name": "Balasana",
     "description": "Lay with legs folded, arms outstretched in front of you",
@@ -15,9 +19,9 @@ aP = Pose.create({
     "intensity": 0,
     "purpose": "Rejuvenate",
     "prop": "None"
-  }); 
+  });
 
- bP = Pose.create({
+ bP = Pose.create!({
     "pose_name": "Downward Facing Dog",
     "sanskrit_name": "Adho Mukha Svanasana",
     "description": "Feet facing forward, shoulder width apart, hips up, arms down on mat. Make triangle shape with body.",
@@ -27,7 +31,7 @@ aP = Pose.create({
     "prop": "None"
   });
 
-  cP = Pose.create({
+  cP = Pose.create!({
     "pose_name": "Warrior One",
     "sanskrit_name": "Virabhadrasana I",
     "description": "One leg forward, at 90 degree to ground. Back foot, at 45 degree angle (not completely perpendicular) to body. Hips facing forward. Arms stretching vertically",
@@ -59,143 +63,80 @@ aP = Pose.create({
 
 
 
-    uA = User.create({
+    uA = User.create!({
         "username": "Admin",
         "display_name": "Admin"
     })
 
-    uB = User.create({
+    uB = User.create!({
         "username": "Tori",
         "display_name": "The Tori"
     })
 
-    uC = User.create({
+    uC = User.create!({
         "username": "Sophia",
         "display_name": "The Sophia"
     })
 
-    uD = User.create({
+    uD = User.create!({
         "username": "Test",
         "display_name": "Tester"
     })
 
 
-    sA = Sequence.create({
-        "user_id": 1,
+    sA = Sequence.create!({
+        "user_id": uA.id,
         "sequence_name": "Test #1",
         "memo": "Testing.... ",
         "yoga_style": "No style."
     })
 
-    sB = Sequence.create({
-        "user_id": 4,
+    sB = Sequence.create!({
+        "user_id": uB.id,
         "sequence_name": "Test #2",
         "memo": "Another Style",
         "yoga_style": "Hot Yoga"
     })
 
 
-
-
-    spA = SequencePose.create({
-        "sequence_id": 1,
-        "pose_id": 3,
+    spA = SequencePose.create!({
+        "sequence_id": sA.id,
+        "pose_id": aP.id,
         "order_no": 4,
         "duration": 5
     })
 
-    spB = SequencePose.create({
-        "sequence_id": 1,
-        "pose_id": 5,
+    spB = SequencePose.create!({
+        "sequence_id": sA.id,
+        "pose_id": aP.id,
         "order_no": 2,
         "duration": 4
     })
 
-    spC = SequencePose.create({
-        "sequence_id": 1,
-        "pose_id": 2,
+    spC = SequencePose.create!({
+        "sequence_id": sA.id,
+        "pose_id": aP.id,
         "order_no": 1,
         "duration": 5
     })
 
-    spD = SequencePose.create({
-        "sequence_id": 1,
-        "pose_id": 1,
+    spD = SequencePose.create!({
+        "sequence_id": sB.id,
+        "pose_id": eP.id,
         "order_no": 3,
         "duration": 2
     })
 
-    spE = SequencePose.create({
-        "sequence_id": 2,
-        "pose_id": 2,
+    spE = SequencePose.create!({
+        "sequence_id": sB.id,
+        "pose_id": eP.id,
         "order_no": 1,
         "duration": 4
-    })    
+    })
 
-    spF = SequencePose.create({
-        "sequence_id": 2,
-        "pose_id": 3,
+    spF = SequencePose.create!({
+        "sequence_id": sB.id,
+        "pose_id": dP.id,
         "order_no": 2,
         "duration": 6
-    })    
-    
-    
-#   fP = Pose.create({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
-
-#   gP = Pose.create({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
-
-#   hP = Pose.create({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
-
-#   iP = Pose.create({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
-
-#   jP = Pose.create({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
-
-#   kP = Pose.new ({
-#     "pose_name": "",
-#     "sanskrit_name": "",
-#     "description": "",
-#     "photo_url": "",
-#     "intensity": 1,
-#     "purpose": "",
-#     "prop": "None",
-#   })
+    })
