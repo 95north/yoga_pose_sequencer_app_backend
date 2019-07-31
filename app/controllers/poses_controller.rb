@@ -5,4 +5,11 @@ class PosesController < ApplicationController
         render json: @poses
     end
 
+    def show
+        @pose = Pose.find(params[:id])
+        render json: @pose
+    end
+
+
+
 end
