@@ -36,10 +36,12 @@ class SequencePosesController < ApplicationController
 
 
     def seqposes 
-        @seq = SequencePose.find_by(params[:id])
-        @seq_id = @seq.sequence_id
+        # @seq = SequencePose.find(params[:id])
+        # @seq_id = @seq.sequence_id
+
+        @seq = (params[:id]).to_i
         @poses_for_seq = SequencePose.all.find_all{ |ea|
-            ea.sequence_id == @seq_id
+        ea.sequence_id == @seq
         }
 
         render json: @poses_for_seq
