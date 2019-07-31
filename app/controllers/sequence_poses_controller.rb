@@ -19,9 +19,18 @@ class SequencePosesController < ApplicationController
             newsp = SequencePose.new
             newsp.sequence_id =  sp["sequence_id"]
             newsp.pose_id =  sp["pose_id"]
+            newsp.order_no = sp["order_no"]
+            newsp.duration = sp["duration"]
             newsp.save
         end
-        render json: "SUCssssESS"
+
+        @seqId = @seqPoses[0]["sequence_id"].to_i
+        #@seq = SequencePose.find_by(@seqId)
+        @seq = SequencePose.all.find_all{ |sp|
+            sp.sequence_id == @seqId
+        }
+
+        render json: @seq
         # render json for just the one sequence
     end
 
