@@ -143,6 +143,69 @@ aP = Pose.create!({
     "prop": "None"
   })
 
+  mP = Pose.create({
+    "pose_name": "Extended Triangle",
+    "sanskrit_name": "Utthita Trikonasana",
+    "description": "Starting in warrior 2, straighten your front knee, open arms and lean into pose.",
+    "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTc3OTY2Mjk4NzM2NDMx/2yp_285_1643_prf.webp",
+    "intensity": 4 ,
+    "purpose": "Flexibility, Balance, Strength",
+    "prop": "None"
+  })
+
+  nP = Pose.create({
+    "pose_name": "Boat Pose",
+    "sanskrit_name": "Paripurna Navasana",
+    "description": "Sit on your tailbone, back straight and arms out in front. Essentially, you want to make a V shape with your body.",
+    "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTUyNzM1MjQ1MTgyNDE0/boathp_292_8_bjk.webp",
+    "intensity": 8,
+    "purpose": "Alignment, Strength",
+    "prop": "None"
+  })
+
+  oP = Pose.create({
+    "pose_name": "Bridge Pose",
+    "sanskrit_name": "Setu Bandha Sarvangasana",
+    "description": "Feet hips width apart, shoulders on the floor, clasp hands underneath body, and chest up.",
+    "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTc0Njc5MDM4MTQxOTAy/2hp_286_0621_bjk.webp",
+    "intensity": 6,
+    "purpose": "Strength",
+    "prop": "None"
+  })
+
+  pP = Pose.create({
+    "pose_name": "Supported Shoulderstand",
+    "sanskrit_name": "",
+    "description": "Lying on your back, lift both legs up straight in the air. Supported by your shoulders, press your hands into your back to lift your torso.",
+    "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTc4MTM4NjM0Mjk5MTgz/2anatomy_284_05_fnl.webp",
+    "intensity": 8 ,
+    "purpose": "Strength, Balance",
+    "prop": "None"
+  })
+
+
+    qP = Pose.create({
+      "pose_name": "Cobra Pose",
+      "sanskrit_name": "Bhujangasana ",
+      "description": "Lying on the ground belly down, place your hands at chest level next to your body and lift you head, neck, and shoulders into the air.  ",
+      "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTU3MjczOTUxNjEwMzE4/3yp_287_6710_gn_bjk.webp",
+      "intensity": 3,
+      "purpose": "Alignment, Strength, Flexibility",
+      "prop": "None"
+    })
+
+    rP = Pose.create({
+      "pose_name": "Bow Pose",
+      "sanskrit_name": "Bhujangasana ",
+      "description": "Starting on the ground belly down, grab the top of your feet with you hands and lift everything but your torso in the air.  ",
+      "photo_url": "https://www.yogajournal.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1240/MTQ3MTU2OTM0NjQ5MTk0Mjg3/3enneagram_289_1380_bjk.webp",
+      "intensity": 8,
+      "purpose": "Alignment, Strength, Flexibility",
+      "prop": "None"
+    })
+
+
+
 
     uA = User.create!({
         "username": "Admin",
