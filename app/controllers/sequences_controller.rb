@@ -22,6 +22,16 @@ class SequencesController < ApplicationController
         render json: @sequence
     end
 
+    def update 
+        @id = params[:seqToUpdateId]
+        @sequence = Sequence.find(@id)
+        @sequence.memo = params[:memo]
+        @sequence.yoga_style = params[:yoga_style]
+        @sequence.user_id = params[:user_id]
+        @sequence.save
+        render json: @sequence
+    end
+
     def destroy
         @seq = Sequence.find(params[:id])
         @seq.destroy
