@@ -4,8 +4,6 @@ get '/sp/:id', to: "sequence_poses#seqposes"
 post '/bulkcreatesp', to: "sequence_poses#bulkcreate"
 
 
-
-
   resources :sequence_poses
   resources :sequences
   resources :poses
