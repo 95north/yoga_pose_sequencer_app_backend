@@ -5,9 +5,7 @@ class CreatePoses < ActiveRecord::Migration[6.0]
       t.string :sanskrit_name
       t.string :description
       t.string :photo_url
-      t.integer :intensity
-      t.string :purpose
-      t.string :prop
+      t.integer :sequence_id
       t.timestamps
     end
   end
