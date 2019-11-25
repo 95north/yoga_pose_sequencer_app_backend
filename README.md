@@ -1,24 +1,10 @@
-# README
+## Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To try out the whole app, visit: 
+https://yoga-sequencer.herokuapp.com/. <br/> <br/>
+Or, to just test out the API endpoints, visit: https://yoga-sequencer-backend.herokuapp.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies Used
+  •	Ruby on Rails <br/>
+  •	Ruby CORS gem <br/>
+  •	Sqlite3 <br/>
